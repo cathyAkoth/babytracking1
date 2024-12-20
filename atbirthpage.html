@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+	max-width: 400px;
+	width: 100%;
+	background: #fff;
+	padding: 30px;
+	border-radius: 30px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: grey;
+  padding-right: 30px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: grey;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: grey;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.central {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+.select-image{
+  
+	width: 30%;
+	padding: 16px 0;
+	border-radius: 50px;
+	background: aqua;
+	color: #fff;
+	font-weight: 500;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	transition: all .3s ease;
+
+}
+a {
+ text-decoration: none;
+ color: #fff;
+
+}
+
+
+</style>
+</head>
+<body>
+
+<h2>AT Birth </h2>
+
+
+<img src="babyphoto.jpg" alt="babyphoto" style="width:20%;">
+<div class="central">
+<p>At birth the baby is expected to receive these vaccines;</p>
+
+
+<form action="/action_page.php">
+    
+    <label for="vehicle1"> BCG vaccine</label> 
+    <input type="checkbox" id="vehicle1" name="vehicle1" value="BCG vaccine"> <br><br>
+    
+    <label for="vehicle2"> Polio vaccine</label>
+    <input type="checkbox" id="vehicle2" name="vehicle2" value="Polio vaccine"><br>
+
+
+    <p>The next vaccines are to be given at 6 weeks set on <br>alert; </p>
+    
+
+    <button class="select-image"> <a href="babychecklist.html"> Alert </a></button>
+  </form>
+
+</div>
+</body>
+</html>

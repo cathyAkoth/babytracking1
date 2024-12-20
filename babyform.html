@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="styles.css">
+	<title>Input Image With Preview Image</title>
+</head>
+<body>
+	
+	<div class="container">
+
+        <form action="action_page.php">
+		<input type="file" id="file" accept="image/*" hidden>
+		<div class="img-area" data-img="">
+			<i class='bx bxs-cloud-upload icon'></i>
+			
+			
+		
+		<button class="select-imag">Upload Image</button>
+		
+	</div>
+
+	<div class="center">
+		<p>Baby</p>
+	  </div>
+    
+        <label for="fname">Name:</label>
+        <input type="text" id="fname" name="firstname">
+        <p></p>
+        <label for="birthday">Date of birth:</label>
+<input type="date" id="birthday" name="birthday">
+        <p></p>
+        <label for="gender">Gender
+        </label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+
+		<button class="select-image"> <a href="schedulepage.html">Start Tracking </a></button>
+       
+    </form>
+    
+    </div>
+	
+	<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Immunisation Schedule</title>
+    <style>
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Page Container */
+      body {
+        background-color: #f8f9fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 800px;
+        background-color: #fff;
+        padding: 10px 15px;
+        text-align: center;
+      }
+
+      /* Header */
+      .header {
+        background-color: #007a74;
+        color: #ffffff;
+        padding: 20px;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        font-weight: bold;
+        position: relative;
+      }
+
+      .header::before {
+        font-size: 1.2em;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .header::after {
+        content: "";
+        display: block;
+        margin: 10px auto 0;
+        height: 2px;
+        width: 50px;
+        background-color: #ddd;
+      }
+
+      /* Schedule Grid */
+      .schedule {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-top: 20px;
+        text-align: none;
+      }
+
+      a {
+
+        text-decoration: none;
+        color: black;
+
+      }
+
+      .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        font-size: 1.1em;
+        font-weight: bold;
+        border-radius: 60px; /* Rounded Corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        cursor: pointer; /* Clickable */
+        transition: all 0.3s ease;
+        user-select: none; /* Prevent text selection */
+      }
+
+      /* Card Hover Effect */
+      .card:hover {
+        background-color: #f0f8ff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transform: translateY(-3px); /* Slight lift effect */
+      }
+
+      /* Colorful Cards */
+      .card:nth-child(1) {
+        background-color: #ece3b1;
+      }
+      .card:nth-child(2) {
+        background-color: #c6d9f1;
+      }
+      .card:nth-child(3) {
+        background-color: #f3d5e0;
+      }
+      .card:nth-child(4) {
+        background-color: #bfe5ea;
+      }
+      .card:nth-child(5) {
+        background-color: #c1e7db;
+      }
+      .card:nth-child(6) {
+        background-color: #f2dbbf;
+      }
+      .card:nth-child(7) {
+        background-color: #bfe9e7;
+      }
+      .card:nth-child(8) {
+        background-color: #c5cbe9;
+      }
+
+      /* Responsive Design */
+      @media screen and (max-width: 600px) {
+        .schedule {
+          grid-template-columns: 1fr 1fr; /* 2 Columns for Mobile */
+        }
+      }
+
+      @media screen and (max-width: 400px) {
+        .schedule {
+          grid-template-columns: 1fr; /* 1 Column for Very Small Devices */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">Immunisation Schedule</div>
+
+      <!-- Schedule Grid -->
+      <div class="schedule">
+        <div class="card" onclick="cardClick('At Birth')"><a href="atbirthpage.html">At Birth </a></div>
+        <div class="card" onclick="cardClick('At 6 Weeks')">At 6 Weeks</div>
+        <div class="card" onclick="cardClick('At 10 Weeks')">At 10 Weeks</div>
+        <div class="card" onclick="cardClick('At 14 Weeks')">At 14 Weeks</div>
+        <div class="card" onclick="cardClick('At 6 Months')">At 6 Months</div>
+        <div class="card" onclick="cardClick('At 7 Months')">At 7 Months</div>
+        <div class="card" onclick="cardClick('At 8 Months')">At 8 Months</div>
+        <div class="card" onclick="cardClick('At 18 Months')">At 18 Months</div>
+      </div>
+    </div>
+
+
+  </body>
+</html>
